@@ -9,8 +9,6 @@ MHC1_Prediction<-read_html(MHC1_html)
 MHC1_Prediction
 accept_cookies_MHC1<-remote_driver$findElement(using = "id",value = "cookiescript_accept")$clickElement()
 Sys.sleep(2)
-#switch to iframe
-Sys.sleep(2)
 iframe <- remote_driver$findElement("xpath", "*//iframe[@id = 'servicetabs-1']")
 remote_driver$switchToFrame(iframe)
 MHC1_fastabox<-remote_driver$findElement(using = "name",value="SEQPASTE")
